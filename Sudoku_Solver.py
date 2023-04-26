@@ -38,7 +38,9 @@ def prob(a,b,c):
             list.append(str(i+1))
     return list
 #when method of elimination is not sufficient then , if a number is probable in a cell,
-# and it is not probable in any other cell of that tile, then instead of being "probable" the number is confirmed.
+# and it is not probable in any other blank cell of that tile, then instead of being "probable" the number is confirmed.
+#to check this all "Probable number list" of remaining blank cells are made unified by extend command and then converted into a set.
+# then we can chek if there is any probable number in the running cell that is not available in this set and that is the answer.
 def altlogic(i,j):
     global sudoku
     if (i<3):
